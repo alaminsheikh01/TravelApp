@@ -8,6 +8,8 @@ const Categories = ({categories, selectedCategory, onPressCategory}) => {
       showsHorizontalScrollIndicator={false}
       horizontal={true}
       data={categories}
+      style={{marginRight: -32}}
+      keyExtractor={item => String(item)}
       renderItem={({item}) => {
         const selected = selectedCategory === item;
         return (
