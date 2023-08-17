@@ -1,18 +1,18 @@
-import React from 'react';
-import 'react-native-gesture-handler';
-import {Home} from './src/screen/Home';
+import * as React from 'react';
+import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Attraction from './src/screen/Attraction';
+import Gallary from './src/screen/Gallary';
+import {Home} from './src/screen/Home';
 
-const Stack = createStackNavigator();
-
+const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen component={Home} name="Home" />
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
-      {/* <Home /> */}
     </NavigationContainer>
   );
 };
