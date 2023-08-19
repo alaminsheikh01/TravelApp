@@ -6,10 +6,13 @@ import Categories from '../../components/Categories';
 import AttractionCard from '../../components/AttractionCard.js';
 import JsonData from '../../data/attraction.json';
 import categories from '../../data/categories.json';
+import {useNavigation} from '@react-navigation/native';
 
 const All = 'All';
 
 export const Home = () => {
+  const navigation = useNavigation();
+
   const [selectedCategory, setSelectedCategory] = useState(All);
   const [data, setData] = useState([]);
 
@@ -56,6 +59,7 @@ export const Home = () => {
             title={item?.name}
             subtitle={item?.city}
             image={item?.images?.length ? item?.images[0] : null}
+            onPress={() => navigation.navigate('Attraction', {item: item})}
           />
         )}
       />
