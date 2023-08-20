@@ -72,6 +72,20 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     marginTop: 8,
   },
+  map: {
+    width: '100%',
+    height: 200,
+    borderRadius: 10,
+    paddingBottom: 40,
+    marginTop: 20,
+  },
+  mapText: {
+    marginTop: 10,
+    marginBottom: 30,
+    color: 'green',
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
 });
 
 export default styles;
